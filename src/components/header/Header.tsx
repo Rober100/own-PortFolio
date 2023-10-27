@@ -9,9 +9,9 @@ const Header = () => {
         </a>
 
         <div className="nav__menu">
-          <ul className="nav__list grid">
+          <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" className="nav__link">
+              <a href="#home" className="nav__link active-link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -107,6 +107,7 @@ const Header = () => {
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
+                  className="nav__icon"
                 >
                   <path
                     fill="currentColor"
