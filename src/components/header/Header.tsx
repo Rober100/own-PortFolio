@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./header.css";
 
 const Header = () => {
+  const [toggle, showToggle]  = useState(false);
   return (
     <header className="header">
       <nav className="nav container">
@@ -8,7 +10,7 @@ const Header = () => {
           Rober
         </a>
 
-        <div className="nav__menu">
+        <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list">
             <li className="nav__item">
               <a href="#home" className="nav__link active-link">
@@ -125,6 +127,7 @@ const Header = () => {
             height="1em"
             viewBox="0 0 24 24"
             className="nav__close"
+            onClick={() => showToggle(!toggle)}
           >
             <path
               fill="currentColor"
@@ -132,7 +135,7 @@ const Header = () => {
             />
           </svg>
         </div>
-        <div className="nav__toggle">
+        <div className="nav__toggle" onClick={() => showToggle(!toggle)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
