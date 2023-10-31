@@ -1,0 +1,64 @@
+import React from "react";
+
+function ScrollDown() {
+  return (
+    <div className="home__scroll">
+      <a href="#about" className="home__scroll-button">
+        <svg
+          width="32px"
+          height="32px"
+          className="home__scroll-mouse"
+          viewBox="0 0 247 390"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          style={{
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "1.5",
+          }}
+        >
+          <path
+            className="wheel"
+            d="M123.359,79.775l0,72.843"
+            style={{
+              fill: "none",
+              stroke: "var(--title-color)",
+              strokeWidth: "20px",
+            }}
+          ></path>
+          <path
+            id="mouse"
+            d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+            style={{
+              fill: "none",
+              stroke: "var(--title-color)",
+              strokeWidth: "20px",
+            }}
+          ></path>
+        </svg>
+        <span className="home__scroll-name">Ir hacia abajo</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 48 48"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="4"
+            d="m5 24l19 18l19-18H31V6H17v18H5Z"
+            className="home__scroll-name"
+          />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
+export default ScrollDown;
