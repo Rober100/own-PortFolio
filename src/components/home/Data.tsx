@@ -57,11 +57,8 @@ const Data = () => {
       </h1>
       <h3 className="home__subtitle">Full Stack Developer</h3>
       <p className="home__description">
-        Desarrollador full stack apasionado por crear experiencias digitales
-        innovadoras. Me enfoco en construir productos web escalables y de alta
-        calidad, aplicando las mejores prácticas de desarrollo ágil. Disfruto
-        aprender constantemente nuevas tecnologías y frameworks para resolver
-        problemas de forma creativa.
+        Desarrollador Full stack apasionado por crear experiencias digitales
+        innovadoras. 
       </p>
       <a href="#contact" className="button button--flex">
         {" "}

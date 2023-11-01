@@ -3,7 +3,11 @@ import React from "react";
 const Social = () => {
   return (
     <div className="home__social">
-      <a href="https://www.linkedin.com/in/roberto-zaracho/" className="home__social-icon" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/roberto-zaracho/"
+        className="home__social-icon"
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -17,7 +21,11 @@ const Social = () => {
         </svg>
       </a>
 
-      <a href="" className="home__social-icon" target="_blank">
+      <a
+        href="https://github.com/Rober100"
+        className="home__social-icon"
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -31,7 +39,11 @@ const Social = () => {
         </svg>
       </a>
 
-      <a href="" className="home__social-icon" target="_blank">
+      <a
+        href="https://wa.me/5493794926291"
+        className="home__social-icon"
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -45,7 +57,7 @@ const Social = () => {
         </svg>
       </a>
 
-      <a href="" className="home__social-icon" target="_blank">
+      <a href="mailto:roberdz30@gmail.com" className="home__social-icon" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
