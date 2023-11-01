@@ -174,5 +174,31 @@ img {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
+
+  .button {
+    padding: 1rem 2rem;
+  }
+
+  .button__icon {
+    width: 20px;
+    height: 20px;
+  }
 }
+
+/* For medium devices */
+ @media screen and (max-width: 768px){
+  .section {
+    padding: 2rem 0 4rem;
+  }
+ }
+
+ @media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 4rem;
+  }
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+ }
 
