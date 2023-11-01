@@ -1,9 +1,7 @@
-import React from "react";
-
 function ScrollDown() {
   return (
     <div className="home__scroll">
-      <a href="#about" className="home__scroll-button">
+      <a href="#about" className="home__scroll-button button--flex">
         <svg
           width="32px"
           height="32px"
@@ -44,16 +42,12 @@ function ScrollDown() {
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
           height="1em"
-          viewBox="0 0 48 48"
+          viewBox="0 0 24 24"
+          className="home__scroll-arrow"
         >
           <path
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="4"
-            d="m5 24l19 18l19-18H31V6H17v18H5Z"
-            className="home__scroll-name"
+            fill="currentColor"
+            d="M11 4v12.175l-5.6-5.6L4 12l8 8l8-8l-1.4-1.425l-5.6 5.6V4h-2Z"
           />
         </svg>
       </a>

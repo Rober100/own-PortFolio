@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./header.css";
 
 const Header = () => {
-  const [toggle, showToggle]  = useState(false);
+  const [toggle, showToggle] = useState(false);
   return (
     <header className="header">
       <nav className="nav container">
