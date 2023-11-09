@@ -1,7 +1,8 @@
 .header {
     width: 100%;
     position:fixed;
-    margin-top: 1.20rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
