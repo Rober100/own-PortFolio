@@ -49,7 +49,7 @@ const Header = () => {
             </li>
 
             <li className="nav__item">
-              <a href="#skilss" className="nav__link">
+              <a href="#skills" className="nav__link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
