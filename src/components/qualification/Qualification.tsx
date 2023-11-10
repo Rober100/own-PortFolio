@@ -1,6 +1,12 @@
+import { useState } from "react";
 import "./qualification.css";
 
 const Qualification = () => {
+  const [toggle, setToggle] = useState(1);
+
+  const toggleTab = (index: number): void => {
+    setToggle(index);
+  };
   return (
     <section className="qualification section">
       <h2 className="section__title">Calificaciones</h2>
@@ -8,23 +14,39 @@ const Qualification = () => {
 
       <div className="qualification__container container">
         <div className="qualification__tabs">
-          <div className="qualification__button qualification__active button--flex">
+          <div
+            className={
+              toggle === 1
+                ? "qualification__button qualification__active button--flex"
+                : "qualification__button button--flex"
+            }
+            onClick={() => toggleTab(1)}
+          >
             <i className="uil uil-graduation-cap qualification__icon"></i>
             Educación
           </div>
 
-          <div className="qualification__button button--flex">
+          <div
+            className={
+              toggle === 2
+                ? "qualification__button qualification__active button--flex"
+                : "qualification__button button--flex"
+            }
+            onClick={() => toggleTab(2)}
+          >
             <i className="uil uil-briefcase-alt qualification__icon"></i>
             Experiencia
           </div>
         </div>
 
-        <div className="qualification__sections">
-
-            {/* Aca están los Estudios */}
-          <div className="qualification__content qualification__content-active">
-            {/* Aca esta el primer titulo */}
-
+        <div className="qualification__section">
+          <div
+            className={
+              toggle === 1
+                ? "qualification__content qualification__content-acive"
+                : "qualification__content"
+            }
+          >
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">
@@ -44,8 +66,6 @@ const Qualification = () => {
                 <span className="qualification__line"></span>
               </div>
             </div>
-
-            {/* Aca esta el primer titulo */}
 
             <div className="qualification__data">
               <div></div>
@@ -67,7 +87,6 @@ const Qualification = () => {
               </div>
             </div>
 
-            {/* Aca vienen las experiencias */}
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">
@@ -89,9 +108,13 @@ const Qualification = () => {
             </div>
           </div>
 
-          {/* Aca están las experiencias */}
-          <div className="qualification__content">
-
+          <div
+            className={
+              toggle === 2
+                ? "qualification__content qualification__content-active"
+                : "qualification__content"
+            }
+          >
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">Aca poner experiencias</h3>
@@ -119,16 +142,18 @@ const Qualification = () => {
               </div>
 
               <div>
-                <h3 className="qualification__title">Aca poner otra Experiencia</h3>
+                <h3 className="qualification__title">
+                  Aca poner otra Experiencia
+                </h3>
                 <span className="qualification__subtitle">
                   Aca poner el lugar de la experiencia
                 </span>
                 <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i> fecha de la segunda experiencia
+                  <i className="uil uil-calender-alt"></i> fecha de la segunda
+                  experiencia
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
