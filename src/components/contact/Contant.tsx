@@ -1,4 +1,4 @@
-
+import "./contact.css"
 const Contant = () => {
   return (
     <section className="contact section" id="contact">
@@ -104,7 +104,7 @@ const Contant = () => {
               />
             </div>
 
-            <div className="contact__form-div">
+            <div className="contact__form-div contact__form-area">
               <label htmlFor="" className="contact__form-tag">
                 Mensaje
               </label>
