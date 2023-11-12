@@ -1,20 +1,49 @@
-import { useRef } from "react";
+import { useRef, RefObject, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 import "./contact.css";
 const Contant = () => {
-  const form = useRef();
+  const form: RefObject<HTMLFormElement> = useRef(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensaje, setMensaje] = useState("");
+  const isFormValid =
+    name.trim() !== "" && email.trim() !== "" && mensaje.trim() !== "";
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_cf4qkwr",
-      "template_qlst9ds",
-      form.current,
-      "gttOWeYRbheAscjC7"
+    if (!isFormValid) {
+      showError()
+      return;
+    }
+
+    if (form.current) {
+      emailjs.sendForm(
+        "service_cf4qkwr",
+        "template_qlst9ds",
+        form.current,
+        "gttOWeYRbheAscjC7"
+      );
+      form.current.reset();
+      setName("");
+      setEmail("");
+      setMensaje("");
+      showAlert();
+    }
+  };
+
+  const showAlert = () => {
+    Swal.fire(
+      "Mensaje Enviado!",
+      "Su correo sera respondido a la brevedad",
+      "success"
     );
-    e.target.reset();
+  };
+
+  const showError = () => {
+    Swal.fire("Error", "Complete todo los campos por favor!", "error");
   };
 
   return (
@@ -106,6 +135,7 @@ const Contant = () => {
                 name="name"
                 className="contact__form-input"
                 placeholder="Inserte su nombre"
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
@@ -118,6 +148,7 @@ const Contant = () => {
                 name="email"
                 className="contact__form-input"
                 placeholder="Inserte su Email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -131,9 +162,12 @@ const Contant = () => {
                 rows={10}
                 className="contact__form-input"
                 placeholder="Escriba su mensaje..."
+                onChange={(e) => setMensaje(e.target.value)}
               ></textarea>
             </div>
-            <button className="button button--flex">
+            <button
+              className="button button--flex"
+            >
               {" "}
               Enviar
               <svg
