@@ -10,8 +10,6 @@
   transition: 0.4s;
 }
 
-/* ... (resto del CSS) */
-
 .scrollup__icon {
   font-size: 1.4rem;
   color: var(--container-color);
@@ -38,6 +36,14 @@
   }
 }
 
-@media screen and (max-width: 992px) {
-    
+@media screen and (max-width: 768px) {
+    .show-scroll{
+      bottom: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .scrollup {
+      right: 1rem;
+    }
   }
