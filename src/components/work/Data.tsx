@@ -35,7 +35,7 @@ export const projects: Project[] = [
     category: "App",
   },
   {
-    id: 2,
+    id: 4,
     title: "Juego",
     description: "Ta-te-tí",
     image: image4,

@@ -11,12 +11,14 @@ const Works = () => {
     if (selectedCategory === "All") {
       setFilteredProjects(projects);
     } else {
-      const newProjects = projects.filter((projects) => {
-        return projects.category === selectedCategory;
+      const newProjects = projects.filter((project) => {
+        return project.category === selectedCategory;
       });
+  
       setFilteredProjects(newProjects);
     }
   }, [selectedCategory]);
+  
 
   const handleClick = (e: React.MouseEvent, index: number) => {
     setSelectedCategory(e.currentTarget.textContent || "");
@@ -31,9 +33,7 @@ const Works = () => {
               onClick={(e) => {
                 handleClick(e, index);
               }}
-              className={`${
-                activeIndex === index ? "active-work" : ""
-              }work__item`}
+              className={`${activeIndex === index ? "active-work" : "work__item"}`}
               key={index}
             >
               {category.name}
