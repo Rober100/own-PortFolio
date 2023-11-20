@@ -1,12 +1,12 @@
 import "./about.css";
-import CV from "../../assets/Roberto-Zaracho-Dev-CV.pdf";
+import CV from "../../assets/Roberto Zaracho - CV.pdf";
 import AboutImg from "../../assets/ahora.jpg";
 import Info from "./Info";
 function about() {
   return (
     <section className="about section" id="about">
       <h2 className="section__title">Sobre mí</h2>
-      <span className="section__subtitle">My introducción</span>
+      <span className="section__subtitle">Certificaciones</span>
       <div className="about__container container grid">
         <img src={AboutImg} alt="" className="about__img" />
 
