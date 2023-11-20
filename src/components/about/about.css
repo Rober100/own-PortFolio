@@ -25,9 +25,18 @@
   transition: box-shadow 0.4s;
 }
 
+.about__ver-text {
+  font-size: 14px;
+  color: var(--title-color);
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
 .about__box:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  border-radius: 0.75rem;
+
 }
 
 .about__icon {

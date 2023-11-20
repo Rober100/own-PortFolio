@@ -3,6 +3,22 @@ import "./header.css";
 
 const Header = () => {
   const [toggle, showToggle] = useState(false);
+
+  const toggleTheme = () => {
+    // Obtener el elemento raiz <html>
+    const rootElement = document.documentElement;
+    
+    
+
+    //Determinar el tema actual y cambiarlo
+    if(rootElement.getAttribute("data-bs-theme") === "dark"){
+      console.log(rootElement);
+      rootElement.setAttribute("data-bs-theme", "light");
+    } else {
+      rootElement.setAttribute("data-bs-theme", "dark")
+    }
+  }
+
   return (
     <header className="header">
       <nav className="nav container">
@@ -10,6 +26,7 @@ const Header = () => {
           Rober
         </a>
 
+        <button className="toggle-button" onClick={toggleTheme}>Cambiar de color</button>
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list">
             <li className="nav__item">
@@ -66,7 +83,7 @@ const Header = () => {
               </a>
             </li>
 
-            <li className="nav__item">
+            {/* <li className="nav__item">
               <a href="#services" className="nav__link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +99,7 @@ const Header = () => {
                 </svg>{" "}
                 Services
               </a>
-            </li>
+            </li> */}
 
             <li className="nav__item">
               <a href="#portfolio" className="nav__link">
@@ -98,7 +115,7 @@ const Header = () => {
                     d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2m4 4V4h-4v2h4Z"
                   />
                 </svg>{" "}
-                Portfolio
+                Proyects
               </a>
             </li>
 

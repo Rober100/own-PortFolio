@@ -1,8 +1,13 @@
 
 const Info = () => {
+
+  const handleRedirect = (url : string) => {
+    window.open(url, "_blank")
+  }
+
   return (
     <div className="about__info grid">
-      <div className="about__box">
+      <div className="about__box" onClick={() => handleRedirect("https://certificates.soyhenry.com/new-cert?id=bfc8be603d07f0e0613fc836b5199ac89adb35bcbd8c4705efa76a2d3c448149")}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -26,9 +31,10 @@ const Info = () => {
         </svg>
         <h3 className="h3 about__title">Full Stack Developer</h3>
         <span className="about__subtitle">Henry</span>
+        <p className="about__ver-text">Ver</p>
       </div>
 
-      <div className="about__box">
+      <div className="about__box" onClick={() => handleRedirect("https://www.efset.org/cert/GM34vt")}>
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -69,7 +75,8 @@ const Info = () => {
           </g>
         </svg>
         <h3 className="h3 about__title">Ingles</h3>
-        <span className="about__subtitle">A1-B1</span>
+        <span className="about__subtitle">A2-B1</span>
+        <p className="about__ver-text">Ver</p>
       </div>
     </div>
   );
