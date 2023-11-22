@@ -3,6 +3,12 @@ import "./header.css";
 
 const Header = () => {
   const [toggle, showToggle] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const btnSwitch = () => {
+    setIsActive(!isActive);
+    document.body.classList.toggle("dark");
+  };
 
   return (
     <header className="header">
@@ -10,7 +16,11 @@ const Header = () => {
         <a href="#home" className="nav__logo">
           Rober
         </a>
-        <button className="switch" id="switch">
+        <button
+          className={`switch ${isActive ? "active" : "noActive"}`}
+          id="switch"
+          onClick={btnSwitch}
+        >
           <span className="span__switch-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
