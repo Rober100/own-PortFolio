@@ -83,6 +83,12 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--title-color);
+  transition: .4s ease all;
+}
+
+body.dark {
+  background: #1d1c1c;
+  color: #fff;
 }
 
 h1, h2, h3 {
