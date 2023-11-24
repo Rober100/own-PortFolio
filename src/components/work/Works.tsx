@@ -14,15 +14,28 @@ const Works = () => {
       const newProjects = projects.filter((project) => {
         return project.category === selectedCategory;
       });
-  
+
       setFilteredProjects(newProjects);
     }
   }, [selectedCategory]);
-  
+
+  //Nuevo para el carrusel
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveImageIndex(
+        (prevIndex) => (prevIndex + 1) % projects[activeIndex].image.length
+      );
+    }, 2500);
+
+    return () => clearInterval(intervalId);
+  }, [activeIndex]);
 
   const handleClick = (e: React.MouseEvent, index: number) => {
     setSelectedCategory(e.currentTarget.textContent || "");
-    setActiveIndex(index);
+    setActiveImageIndex(index);
+    setActiveImageIndex(0)
   };
   return (
     <div>
@@ -33,7 +46,9 @@ const Works = () => {
               onClick={(e) => {
                 handleClick(e, index);
               }}
-              className={`${activeIndex === index ? "active-work" : "work__item"}`}
+              className={`${
+                activeIndex === index ? "active-work" : "work__item"
+              }`}
               key={index}
             >
               {category.name}
@@ -44,7 +59,7 @@ const Works = () => {
 
       <div className="work__container container grid">
         {filteredProjects.map((projects) => {
-          return <WorkItems item={projects} key={projects.id} />;
+          return <WorkItems item={projects} key={projects.id} activeImageIndex={activeImageIndex}/>;
         })}
       </div>
     </div>

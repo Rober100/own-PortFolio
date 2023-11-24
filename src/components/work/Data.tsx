@@ -1,13 +1,19 @@
-import image1 from "../../assets/img2.png";
-import image2 from "../../assets/work2.jpg";
-import image3 from "../../assets/work3.jpg";
-import image4 from "../../assets/work4.jpg";
+//* Image about Trendy Spot //
+import image1 from "../../assets/trendy-Spot/img1.png";
+import image2 from "../../assets/trendy-Spot/img2.png";
+import image3 from "../../assets/trendy-Spot/img3.png";
+
+// //* Image about Trendy Tech //
+// import img1 from "../../assets/trendy-Tech/Cap1.png";
+// import img2 from "../../assets/trendy-Tech/Cap2.png";
+// import img3 from "../../assets/trendy-Tech/Cap3.png";
+
 
 interface Project {
   id: number;
   title: string;
   description: string;
-  image: Array;
+  image: Array<string>;
   category: string;
   link: string;
 }
@@ -15,37 +21,30 @@ interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Trendy Spot",
-    description: "E-commerce de ventas de productos.",
-    image: [image1],
-    category: "App",
-    link: "https://front-trendy-app.vercel.app/"
-  },
-  {
-    id: 2,
     title: "Trendy Tech",
     description:
       "Henry Countries es una plataforma interactiva que te permite explorar el mundo y descubrir información detallada sobre países de una manera única y personalizada.",
-    image: image2,
+    image: [image1, image2, image3],
     category: "Web",
-    link: "https://front-trendy-app.vercel.app/"
+    link: "https://trendy-tech.onrender.com/",
   },
-  {
-    id: 3,
-    title: "Trendy Spot",
-    description: "E-commerce de venta de ropa deportiva.",
-    image: image3,
-    category: "App",
-    link: "https://front-trendy-app.vercel.app/"
-  },
-  {
-    id: 4,
-    title: "Juego",
-    description: "Ta-te-tí",
-    image: image4,
-    category: "Design",
-    link: "https://front-trendy-app.vercel.app/"
-  },
+  // {
+  //   id: 2,
+  //   title: "Trendy Spot",
+  //   description: "E-commerce de ventas de productos.",
+  //   image: [img1, img2, img3],
+  //   category: "App",
+  //   link: "https://front-trendy-app.vercel.app/",
+  // },
+
+  // {
+  //   id: 3,
+  //   title: "Juego Ta-Te-Tí",
+  //   description: "Ta-te-tí",
+  //   image: [image4],
+  //   category: "Design",
+  //   link: "https://front-trendy-app.vercel.app/",
+  // },
 ];
 
 export const projectsNav = [
