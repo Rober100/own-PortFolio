@@ -45,6 +45,11 @@
   margin-bottom: var(--mb-0-5);
 }
 
+.work__button-container {
+  display: flex;
+  gap: 4rem; /* Ajusta el espacio entre los botones según sea necesario */
+}
+
 .work__button {
   color: var(--text-color);
   font-size: var(--small-font-size);

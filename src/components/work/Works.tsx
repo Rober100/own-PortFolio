@@ -27,7 +27,7 @@ const Works = () => {
       setActiveImageIndex(
         (prevIndex) => (prevIndex + 1) % projects[activeIndex].image.length
       );
-    }, 2500);
+    }, 3500);
 
     return () => clearInterval(intervalId);
   }, [activeIndex]);
