@@ -8,6 +8,13 @@ import img1 from "../../assets/trendy-Tech/Cap1.png";
 import img2 from "../../assets/trendy-Tech/Cap2.png";
 import img3 from "../../assets/trendy-Tech/Cap3.png";
 
+//* Image about Henry Countries //
+import image from "../../assets/henry-Countries/countrie.png"
+import image02 from "../../assets/henry-Countries/countrie2.png"
+import image03 from "../../assets/henry-Countries/countrie3.png"
+
+
+
 
 interface Project {
   id: number;
@@ -40,14 +47,15 @@ export const projects: Project[] = [
     repo: "https://github.com/Rey5440/TrendyTech-Back"
   },
 
-  // {
-  //   id: 3,
-  //   title: "Henry Countries",
-  //   description: "Una single page aplication que simula una pagina de turismo",
-  //   image: [image4],
-  //   category: "Design",
-  //   link: "https://front-trendy-app.vercel.app/",
-  // },
+  {
+    id: 3,
+    title: "Henry Countries",
+    description: "Una single page aplication que simula una pagina de turismo",
+    image: [image, image02, image03],
+    category: "Design",
+    link: "",
+    repo: "https://github.com/Rober100/PI-Countries"
+  },
 ];
 
 export const projectsNav = [

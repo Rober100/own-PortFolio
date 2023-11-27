@@ -37,7 +37,7 @@ function ScrollDown() {
             }}
           ></path>
         </svg>
-        <span className="home__scroll-name">Ir hacia abajo</span>
+        <span className="home__scroll-name">Desplácese hacia abajo</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
