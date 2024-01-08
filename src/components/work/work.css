@@ -22,7 +22,7 @@
 
 .work__container {
   grid-template-columns: repeat(2, max-content);
-  gap: 3rem;
+  gap: rem;
   justify-content: center;
 }
 
@@ -45,6 +45,22 @@
   margin-bottom: var(--mb-0-5);
 }
 
+.work__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 20px;
+  background-color: rgba(15, 14, 14, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.work__card:hover .work__description {
+  background-color: rgba(15, 14, 14, 0.9);
+}
 .work__button-container {
   display: flex;
   gap: 4rem; /* Ajusta el espacio entre los botones según sea necesario */
@@ -85,6 +101,7 @@
   }
 
   .work__card {
+    position: relative;
     padding: 1rem;
   }
 
