@@ -1,5 +1,5 @@
 import "./about.css";
-import CV from "../../assets/RobertoZ.pdf";
+import CV from "../../assets/RobertoZarachoCV.pdf";
 import AboutImg from "../../assets/ahora.jpg";
 import Info from "./Info";
 function about() {
